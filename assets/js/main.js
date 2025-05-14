@@ -209,11 +209,14 @@
 })();
 
 
-
-// Function to initialize EmailJS (already done in HTML)
+// Initialize EmailJS (Ensure it is loaded)
 document.addEventListener("DOMContentLoaded", function() {
-  // Initialize EmailJS (this is already done in the HTML)
-  console.log("EmailJS Initialized");
+  if (window.emailjs) {
+    emailjs.init("o4Bj_nIweoCo_9yzt"); // Replace with your actual Public Key
+    console.log("EmailJS Initialized");
+  } else {
+    console.error("EmailJS SDK is not loaded.");
+  }
 });
 
 // Contact Form Submission Handler
@@ -234,7 +237,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   };
 
   // Send the email using EmailJS
-  emailjs.send("service_ta63oqd", "template_4bd7pqa", formData)
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
     .then(() => {
       // Hide loading and show success message
       document.querySelector('.loading').style.display = 'none';
