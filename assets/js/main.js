@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Contact Form Submission Handler
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); 
-
+this.setAttribute('action', '#');
   // Show loading message
   document.querySelector('.loading').style.display = 'block';
   document.querySelector('.error-message').style.display = 'none';
