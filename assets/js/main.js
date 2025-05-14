@@ -209,10 +209,10 @@
 })();
 
 
-// Initialize EmailJS (Ensure it is loaded)
+// Initialize EmailJS
 document.addEventListener("DOMContentLoaded", function() {
   if (window.emailjs) {
-    emailjs.init("o4Bj_nIweoCo_9yzt"); // Replace with your actual Public Key
+    emailjs.init("o4Bj_nIweoCo_9yzt"); 
     console.log("EmailJS Initialized");
   } else {
     console.error("EmailJS SDK is not loaded.");
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Contact Form Submission Handler
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form from submitting normally
+  event.preventDefault(); 
 
   // Show loading message
   document.querySelector('.loading').style.display = 'block';
@@ -237,7 +237,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   };
 
   // Send the email using EmailJS
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
+  emailjs.send("service_ta63oqd", "template_4bd7pqa", formData)
     .then(() => {
       // Hide loading and show success message
       document.querySelector('.loading').style.display = 'none';
@@ -251,3 +251,4 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       document.querySelector('.error-message').style.display = 'block';
     });
 });
+
