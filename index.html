@@ -9,11 +9,9 @@
   <meta name="keywords" content="">
 
   <!-- EmailJS CDN -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("o4Bj_nIweoCo_9yzt"); // Replace with your EmailJS Public Key
-    })();
+  <script type="module">
+  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    emailjs.init('o4Bj_nIweoCo_9yzt'); // Replace with your actual public key
   </script>
 
   <!-- Favicons -->
